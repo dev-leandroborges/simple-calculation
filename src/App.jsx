@@ -1,6 +1,12 @@
-
+import React, {useState, useEffect} from 'react';
 
 function App () {  
+
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
+  const [resultado, setResultado] = useState(0);
+  const [operacao, setOperacao] = useState("Somar");
+
   return (
     <div className="App">
         <h1>Calculadora</h1>
