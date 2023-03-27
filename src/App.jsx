@@ -11,18 +11,28 @@ function App () {
     <div className="App">
         <h1>Calculadora</h1>
         <label>Primeiro Nº</label>
-        <input type="number" />
+        <input 
+          type="number" 
+          value = {num1}
+          onChange={(e) => setNum1(e.target.value)}   
+        />
         <label>Segundo Nº</label>
-        <input type="number" />
+        <input 
+          type="number" 
+          value = {num2}
+          onChange={(e) => setNum2(e.target.value)}
+          />
 
-        <select>
+        <select 
+          onChange={(e) => setOperacao(e.target.value)}>
+
           <option>Somar</option>
           <option>Subtrair</option>
           <option>Multiplicar</option>
           <option>Dividir</option>
         </select>
 
-        <label>Resltado 0</label>
+        <label>Resltado {resultado}</label>
     </div>
   )
 }
