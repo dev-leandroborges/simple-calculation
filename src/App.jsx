@@ -7,6 +7,16 @@ function App () {
   const [resultado, setResultado] = useState(0);
   const [operacao, setOperacao] = useState("Somar");
 
+  const calcular = () => {
+    if (operacao == "Somar")
+      return parseFloat (num1) + (num2);
+    else if (operacao == "Subtrair")
+      return parseFloat (num1) - (num2)
+    else if (operacao == "Multiplicar")
+      return parseFloat (num1) * (num2)
+    else  return parseFloat (num1) / (num2)
+  }
+
   return (
     <div className="App">
         <h1>Calculadora</h1>
