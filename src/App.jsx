@@ -9,13 +9,17 @@ function App () {
 
   const calcular = () => {
     if (operacao == "Somar")
-      return parseFloat (num1) + (num2);
+      return parseFloat (num1) + parseFloat (num2);
     else if (operacao == "Subtrair")
-      return parseFloat (num1) - (num2)
+      return parseFloat (num1) - parseFloat (num2)
     else if (operacao == "Multiplicar")
-      return parseFloat (num1) * (num2)
-    else  return parseFloat (num1) / (num2)
+      return parseFloat (num1) * parseFloat (num2)
+    else  return parseFloat (num1) / parseFloat (num2)
   }
+
+  useEffect (() => {
+    setResultado (calcular());
+  }, [num1, num2, operacao]);
 
   return (
     <div className="App">
